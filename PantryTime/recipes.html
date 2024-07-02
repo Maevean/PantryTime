@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+
+<link rel="stylesheet" href="style.css">
+    <title>Pantry Time</title>
+</head>
+
+<nav>
+        <a href="main.html">
+        <button type="button">Home</button>
+        </a>
+
+        <a href="storage.html">
+            <button type="button">Storage</button>
+        </a>
+
+        <a href="about.html">
+            <button type="button">About</button>
+        </a>
+
+        <a href="contact.html">
+        <button type="button">Contact</button>
+    </a>
+
+        <a href="help.html">
+        <button type="button">Help/FAQ</button>
+    </a>
+
+        <a href="test.html">
+        <button type="button">Test</button>
+    </a>
+
+    
+</nav>
+
+<body>
+    <h2 class="center">Recipes</h2>
+
+       <!-- Recipe <input id="recipe1" value="" type="text">
+        Ingredient <input id="ingredient1" value="" type="text">
+    <br>
+        <input type="button" value="save" onclick="saveFunc()">-->
+
+</body>
+
+<!--<script>
+    function saveFunc(){
+        var recipe = document.getElementById("recipe1").value;
+        var ingredient = document.getElementById("ingredient1").value;
+
+        var data= [];
+        data.push(recipe);
+        data.push(ingredient);
+
+        var dataString = JSON.stringify(data);
+
+        var file = new Blob([dataString],{type:"text"});
+        var anchor = document.createElement("a");
+        anchor.href = URL.createObjectURL(file);
+        anchor.download = "recipes.txt"
+        anchor.click();
+
+        alert(recipe+" "+ingredient);
+}
+</script>
+
+<label for="searchField">Search: </label>
+<input type="search" id="searchField" name="q">
+-->
+
+<form id="myForm">
+    <input type="text" id="userInput" placeholder="Enter your text">
+    <button type="button" onclick="saveToFile()">Save to File</button>
+</form>
+
+<!--    TO DO!!!!!!!! 
+            • Save Multiple Recipes to one File
+            • Abilitly To Search by Recipe or Ingredient
+-->
+
+<!--First Script Code-->
+
+<!-------------------------------------------------------------------->
+
+<!-- • Recipe Display List • -->
+<div id="list">
+    <p>
+        WIP
+    </p>
+    <iframe src="recipes.txt" width="300" height="380" frameborder="0"></iframe>
+</div>
+
+<!--Second Script Code-->
+
+
+<form onSubmit="appendText()">
+    <input type="text" id="userInput2" placeholder="Enter text">
+    <input type="submit" value="Add to File">
+</form>
+<br>
+
+<!-------------------------------------------------------------------->
+
+<!--Third Script Code-->
+<script src="script.js"></script>
+
+</html>

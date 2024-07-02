@@ -1,0 +1,134 @@
+body{
+    background-image: url("005YoungPassion.png");
+   /* align-items: center;
+    justify-content: center;*/
+}
+
+h1{
+    color: white;
+    margin-right: 50%;
+    font-size: 80px;
+}
+
+h2{
+    font-size: 50px;
+    font-family: Ink Free;
+    text-decoration-line:underline;
+    color:white;
+    text-decoration-color: coral;
+    text-indent: 38%;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+p{
+    color: white;
+    margin-left: 20px;
+    font-family: Ink Free;
+    font-size: 20px;
+}
+
+nav{
+    background-color: coral;
+    padding: 15px;
+    border-style: dotted;
+    border-color: white;
+}
+
+ul{
+    list-style-type: none;
+    
+}
+
+li{
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover{
+    color: white;
+}
+
+button{
+    color: white;
+    background-image: url("005YoungPassion.png");
+    font-size: 25px;
+    border-style: dotted;
+    border-color: white;
+    border-radius: 7%;
+    font-family: Curlz MT;
+    border-width: 2.5px;
+    box-shadow: 10px 10px 5px rgb(4, 79, 88);
+    text-shadow: 2px 2px 4px #000000;
+}
+
+button:hover{
+    color: #cf556c;
+    background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+    border-color: coral;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 10px 10px 5px white;
+}
+
+div{
+    margin-left: 8%;
+}
+
+#recipe-name{
+    color: coral;
+    background-color: white;
+    border-style: hidden;
+    border-radius: 3px;
+    width: 250px;
+}
+
+#recipe-name:hover{
+    color: white;
+    background-color: coral;
+    border-style: hidden;
+    border-radius: 3px;
+}
+
+#ingredients{
+    color: coral;
+    background-color: white;
+    border-style: hidden;
+    border-radius: 3px;
+    width: 350px;
+    margin-right: 10px;
+}
+
+#ingredients:hover{
+    color: white;
+    background-color: coral;
+    border-style: hidden;
+    border-radius: 3px;
+}
+
+#search{
+    color: coral;
+    background-color: white;
+    border-style: hidden;
+    border-radius: 3px;
+    width: 250px;
+}
+
+#search:hover{
+    color: white;
+    background-color: coral;
+    border-style: hidden;
+    border-radius: 3px;
+}

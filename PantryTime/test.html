@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+<link rel="stylesheet" href="style.css">
+        <title>Pantry Time</title>
+</head>
+
+<nav>
+        <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="recipes.html">Recipe Book</a></li>
+                <li><a href="storage.html">Storage</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help/FAQ</a></li>
+        </ul>
+</nav>
+
+
+
+<body>
+    <h2>Recipe Book</h2>
+    <form id="recipe-form">
+        <input type="text" id="recipe-name" placeholder="Recipe Name">
+        <input type="text" id="ingredients" placeholder="Ingredients (comma separated)">
+        <button type="submit">Add Recipe</button>
+    </form>
+    <input type="text" id="search" placeholder="Search Recipes or Ingredients">
+    <ul id="recipe-list"></ul>
+
+    <script src="recipeBook.js">
+
+    let recipes = [];
+
+    document.getElementById('recipe-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let name = document.getElementById('recipe-name').value;
+        let ingredients = document.getElementById('ingredients').value.split(',');
+        recipes.push({name, ingredients});
+        document.getElementById('recipe-name').value = '';
+        document.getElementById('ingredients').value = '';
+        displayRecipes();
+    });
+    
+    document.getElementById('search').addEventListener('keyup', function() {
+        let searchValue = this.value;
+        let filteredRecipes = recipes.filter(function(recipe) {
+            return recipe.name.includes(searchValue) || recipe.ingredients.includes(searchValue);
+        });
+        displayRecipes(filteredRecipes);
+    });
+    
+    function displayRecipes(filteredRecipes = recipes) {
+        let recipeList = document.getElementById('recipe-list');
+        recipeList.innerHTML = '';
+        for(let recipe of filteredRecipes) {
+            let listItem = document.createElement('li');
+            listItem.textContent = `${recipe.name}: ${recipe.ingredients.join(', ')}`;
+            recipeList.appendChild(listItem);
+        }
+    }
+        </script>
+</body>
+</html>
